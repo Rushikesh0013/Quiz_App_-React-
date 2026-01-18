@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css"; // optional CSS
+import "./App.css";
 
 const questions = [
   {
@@ -78,13 +78,12 @@ const questions = [
 
 function App() {
 
-  // State variables
+  
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
-  // Handle Next button
   const handleNext = () => {
 
     if (selectedOption === questions[currentQuestion].correctAnswer) {
@@ -101,7 +100,6 @@ function App() {
     }
   };
 
-  // Restart Quiz
   const restartQuiz = () => {
     setCurrentQuestion(0);
     setSelectedOption(null);
@@ -115,7 +113,7 @@ function App() {
       <h1>Quiz Application</h1>
 
       {showResult ? (
-        // Result Screen
+     
         <div>
           <h2>Quiz Finished</h2>
           <p>Your Score: {score}</p>
@@ -123,7 +121,7 @@ function App() {
           <button onClick={restartQuiz}>Restart Quiz</button>
         </div>
       ) : (
-        // Quiz Screen
+       
         <div>
 
           <h3>
